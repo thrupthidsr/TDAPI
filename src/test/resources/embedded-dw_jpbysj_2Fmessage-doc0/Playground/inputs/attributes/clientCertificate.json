@@ -1,0 +1,71 @@
+{
+  "basicConstraints": 57,
+  "criticalExtensionOIDs": [
+    "eros",
+    "libero"
+  ],
+  "extendedKeyUsage": [
+    "tempor",
+    "eget",
+    "In"
+  ],
+  "extensions": [
+    {
+      "criticality": true,
+      "oid": "risus"
+    }
+  ],
+  "issuerAlternativeNames": [
+    {
+      "name": "Conrad",
+      "type": 11
+    }
+  ],
+  "issuerDN": {
+    "commonName": "ac",
+    "name": "Abel"
+  },
+  "issuerUniqueID": [
+    false,
+    false
+  ],
+  "issuerX500Principal": {
+    "name": "Albert"
+  },
+  "keyUsage": [
+    true,
+    false
+  ],
+  "name": "Clint",
+  "nonCriticalExtensionOIDs": [
+    "a",
+    "ut"
+  ],
+  "publicKey": {
+    "algorithm": "risus",
+    "modulus": 31,
+    "params": 59,
+    "publicKey": "semper"
+  },
+  "serialNumber": 84,
+  "serialNumberObject": {
+    "serialNumber": 68
+  },
+  "sigAlgName": "Aliquam",
+  "sigAlgOID": "felis",
+  "subjectAlternativeNames": [
+    {
+      "name": "Coy",
+      "type": 7
+    }
+  ],
+  "subjectDN": {
+    "commonName": "nisi",
+    "name": "Albert"
+  },
+  "subjectX500Principal": {
+    "name": "Amparo"
+  },
+  "type": "erat",
+  "version": 59
+}

@@ -15,6 +15,7 @@
             </http:error-response>
         </http:listener>
         <apikit:router config-ref="accounts-api-config" />
+        <logger doc:name="Logger" doc:id="jpbysj" message="#[payload]"/>
         <error-handler>
             <on-error-propagate type="APIKIT:BAD_REQUEST">
                 <ee:transform doc:name="Transform Message">
