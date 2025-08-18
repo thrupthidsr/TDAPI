@@ -1,0 +1,30 @@
+name: Sandbox - Build and Deploy
+
+on:
+  push:
+    branches: dev
+    #normally you wouldn't be deploying master branch pushes to Sandbox,
+    #but we're keeping things simple! 😃
+
+jobs:
+  buildAndDeploy:
+    runs-on: ubuntu-latest
+    steps:
+      #first, we need to checkout our Mule application's code
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Build and deploy artifact to sandbox
+        #run the maven deploy lifecycle. The -B indicated a batch process,
+        #which reduces the amount of logging the deployment does
+        run: mvn -B deploy -DmuleDeploy
+
+      #Pass in the secrets we need for deployment as environment variables
+      env:
+        username: ${{ secrets.USERNAME }}
+        password: ${{ secrets.PASSWORD }}
+        app.runtime: 4.9.7-java17
+        cloudhub.application_name: deploy-me
+        environment: Sandbox 
+        region: us-east-1 
+        workers: 1 
+        workerType: MICRO
